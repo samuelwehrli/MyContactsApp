@@ -1,4 +1,8 @@
 # MyContactsApp
+
+## Untertitel
 Demo für BMLD Informatik 2
 
-Das ist ein neuer Kommentar (6.3.)
+Eine Liste
+- Punkt 1
+- Punkt 2
