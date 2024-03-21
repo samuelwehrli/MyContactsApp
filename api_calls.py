@@ -40,7 +40,7 @@ def get_coordinate_from_nominatim(street, postal_code, city):
             return lat, lon, ""
         
     # If the status code is not 200, it means that there was an error
-    error_message = f"Error: Could not get the coordinates from the Nominatim API."
+    error_message = f"Nominatim API Error:" + response.text
     return None, None, error_message
 
 
