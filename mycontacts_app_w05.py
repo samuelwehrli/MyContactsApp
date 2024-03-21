@@ -77,10 +77,9 @@ def display_sidebar():
     # if there is an error, show the error message and return, no new entry will be added
     if len(error) > 0:   #
         st.sidebar.error(error)
-        return
-    else:
-        new_entry['lat'] = lat
-        new_entry['lon'] = lon
+   
+    new_entry['lat'] = lat
+    new_entry['lon'] = lon
 
     # if all data is defined, add the new entry to the DataFrame if the "Add" button is clicked
     if st.sidebar.button("Add"):
