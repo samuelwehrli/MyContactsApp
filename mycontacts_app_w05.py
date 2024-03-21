@@ -71,17 +71,22 @@ def display_sidebar():
             st.sidebar.error(f"Bitte ergänze das Feld '{key}'")
             return
         
+    # --- the subsequent code is only executed if all fields are filled ---
     # get the coordinates from the Nominatim API    
     lat, lon, error= api_calls.get_coordinate_from_nominatim(new_entry['street'], new_entry['postal_code'], new_entry['city'])  
 
-    # if there is an error, show the error message and return, no new entry will be added
-    if len(error) > 0:   #
-        st.sidebar.error(error)
-   
     new_entry['lat'] = lat
     new_entry['lon'] = lon
 
-    # if all data is defined, add the new entry to the DataFrame if the "Add" button is clicked
+    # display latitude and longitude in the sidebar
+    st.sidebar.write("Breitengrad:", lat)
+    st.sidebar.write("Längengrad:", lon)
+    
+     # if there is an error, show the error message and return, no new entry will be added
+    if len(error) > 0:   #
+        st.sidebar.error(error)
+
+    # add the new entry to the DataFrame if the "Add" button is clicked
     if st.sidebar.button("Add"):
         update_mycontacts_table(new_entry)
 
