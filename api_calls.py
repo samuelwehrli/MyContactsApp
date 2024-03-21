@@ -20,6 +20,10 @@ def get_coordinate_from_nominatim(street, postal_code, city):
 
     # Set the URL (a constant in uppercase letters is a convention to indicate that it should not be changed)
     API_URL = "https://nominatim.openstreetmap.org/search"
+
+    headers = {
+        'User-Agent': 'MyContactsAppW04 (wehs@zhaw.ch)'
+    }
     
     # Set the parameters
     url_params = {
@@ -28,7 +32,7 @@ def get_coordinate_from_nominatim(street, postal_code, city):
     }
 
     # Send the request to the Nominatim API
-    response = requests.get(API_URL, params=url_params)
+    response = requests.get(API_URL, headers=headers, params=url_params)
 
     # Check the status code
     if response.status_code == 200:  # 200 means "OK"
