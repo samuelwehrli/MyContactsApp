@@ -56,7 +56,7 @@ def get_csv_file_name():
 
 def init_dataframe():
     """Initialize or load the dataframe."""
-    filename = get_csv_file_name
+    filename = get_csv_file_name()
     if 'df' in st.session_state:
         pass
     elif st.session_state.github.file_exists(filename):
