@@ -57,6 +57,20 @@ class LoginManager:
                                      f'Add {res[1]} to {self.CREDENTIALS_FILE}', index=True)
         st.stop()
 
+    def go_home(self, login_page_py_file):
+        """
+        Create a logout button that logs the user out and redirects to the login page.
+        If the user is not logged in, the login page is displayed.
+
+        Parameters
+        - login_page_py_file (str): The path to the Python file that contains the login page
+        """
+        if st.session_state.get("authentication_status") is not True:
+            st.switch_page(login_page_py_file)
+        else:
+            self.authenticator.logout()
+            return  # create logout button
+
 # ============ Manager for data storage ============
         
 class DataManager:

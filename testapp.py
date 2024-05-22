@@ -1,17 +1,9 @@
 import streamlit as st
+from functions.managers import LoginManager
 
-# from functions.data_manager import data_manager 
-from functions.data_manager import LoginManager
+LoginManager().login_page()
 
-show_pages(['testapp'])
-
-lm = LoginManager()
-
-
-
-lm.login_page()
-
-
+st.title("Home Page of the App")
 
 
 
