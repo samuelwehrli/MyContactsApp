@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import date
-from github_contents import GithubContents
+from functions.github_contents import GithubContents
 
 # Set constants
 DATA_FILE = "MyContactsTable.csv"

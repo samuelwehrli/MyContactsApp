@@ -245,7 +245,7 @@ class GithubContents:
         """
         return json.loads(self.read_text(filepath))
     
-    def write_df(self, filepath, df, commit_message, **df_to_csv_kwargs):
+    def write_df(self, filepath, df, commit_message, index=False, **df_to_csv_kwargs):
         """
         Write a dataframe to a given filepath on github.
 
@@ -255,10 +255,10 @@ class GithubContents:
         - commit_message: str, the commit message
         - **dataframe_to_csv_kwargs: additional keyword arguments to pass to DataFrame.to_csv
         """
-        if not isinstance(df, pd.DataFrame, **df_to_csv_kwargs):
+        if not isinstance(df, pd.DataFrame):
             raise TypeError("df must be a DataFrame")
         
-        self.write_text(filepath, df.to_csv(index=False), commit_message)
+        self.write_text(filepath, df.to_csv(index=index), commit_message)
 
     def read_df(self, filepath, **pd_read_csv_kwargs):
         """
