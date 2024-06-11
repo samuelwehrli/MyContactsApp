@@ -1,11 +1,18 @@
 import streamlit as st
-from functions.managers import LoginManager
+# from functions.managers import LoginManager
 
-LoginManager().login_page()
+ 
+
+
+# LoginManager().login_page()
 
 st.title("Home Page of the App")
 
 
+st.sidebar.empty() 
+sidebar_placeholder = st.sidebar.empty()
+with sidebar_placeholder:
+    st.sidebar.title("Menü")
 
 
 #st.write(st.session_state["authentication_status"])
