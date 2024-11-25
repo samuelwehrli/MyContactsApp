@@ -5,7 +5,7 @@ Demo für BMLD Informatik 2
 
 ## To Do
 
-- Would be nice to have all options ins the sidebar 
+- Would be nice to have all options in the sidebar 
   - before login -> login / register
   - After login: logout button and pages in pages
   - **Or:** Hide sidebar during login! 
