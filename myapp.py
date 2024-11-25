@@ -1,13 +1,9 @@
 import streamlit as st
-# from functions.managers import LoginManager
+from utils.managers import LoginManager
 
- 
-
-
-# LoginManager().login_page()
+LoginManager().login_page()
 
 st.title("Home Page of the App")
-
 
 st.sidebar.empty() 
 sidebar_placeholder = st.sidebar.empty()

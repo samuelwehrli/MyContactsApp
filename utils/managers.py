@@ -1,4 +1,4 @@
-from functions.github_contents import GithubContents
+from utils.github_contents import GithubContents
 import streamlit as st
 import streamlit_authenticator as stauth  
 import pandas as pd

@@ -175,6 +175,7 @@ class GithubContents:
         )
     
     # --------------- Sam's new read/write methods ---------------
+    # OUTDATED: They should store to filesystem and the commit to github
     def file_exists(self, filepath):
         """
         Returns True if the file exists, False otherwise.
