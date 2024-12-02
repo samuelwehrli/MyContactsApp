@@ -2,3 +2,18 @@
 .devcontainer/
 _archive/
 userdata/
+
+# Don't commit the VENV, it's automatically created by:
+# - python3 -m venv venv
+# Which is then activated by:
+# - source ./venv/bin/activate
+#
+# Bonus: Use the same VENV inside VS Code by selecting that in the bottom right.
+#
+venv/
+
+# These files are always automatically generated when running the code. Do not check them in.
+__pycache__
+
+# Random other files:
+.DS_Store

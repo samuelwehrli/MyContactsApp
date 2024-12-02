@@ -1,5 +1,18 @@
 # MyContactsApp
 
+## Installation
+
+This is a Python application, based on Streamlit. To install it, you need to have Python installed on your system.
+
+```bash
+# Create a virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install the requirements
+pip install -r requirements.txt
+```
+
 ## Untertitel
 Demo für BMLD Informatik 2
 
